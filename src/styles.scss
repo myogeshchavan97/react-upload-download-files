@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+h1,
+.main-content {
+  margin-bottom: 20px;
+}
+
+.active {
+  font-weight: 600;
+  color: #0e7bf1;
+}
+
+.errorMsg {
+  color: #f21e08;
+  background: #fff0f0;
+  padding: 1rem;
+}
+
+.header {
+  margin-bottom: 20px;
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+      margin: 10px;
+    }
+  }
+}
+
+.upload-section {
+  display: flex;
+  height: 200px;
+  margin-bottom: 10px;
+
+  & > div {
+    width: 50%;
+  }
+}
+
+.drop-zone {
+  margin-bottom: 10px;
+  padding: 40px 10px;
+  height: inherit;
+  border: 2px dashed #e9ebeb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.image-preview {
+  height: inherit;
+  margin-left: 5%;
+}
+
+.preview-image {
+  width: 100%;
+  height: inherit;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.preview-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+}
+
+.files-container {
+  width: 98%;
+  overflow-x: auto;
+}
+
+.files-table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+
+  tr,
+  td,
+  th {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .file-title {
+    width: 20%;
+  }
+
+  .file-description {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .upload-section {
+    flex-direction: column;
+
+    & > div {
+      width: 100%;
+    }
+  }
+  .image-preview {
+    margin-left: 0;
+    height: 300px;
+  }
+  .upload-section {
+    height: unset;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
+  .drop-zone {
+    width: 100%;
+  }
+}
